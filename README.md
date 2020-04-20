@@ -1,86 +1,89 @@
+# RHCSA - Exam commands by lesson numbers
+
 ## Lesson 2.1
 
- - Print working directory  
+- Print working directory  
 `pwd`
 
- - Current user name  
+- Current user name  
 `whoami`
 
- - List files or directories  
+- List files or directories  
 `ls`
 `ls -l`
 
- - Current ip address configuration  
+- Current ip address configuration  
 `ip addr show`
 
- - Free memory  
+- Free memory  
 `free -m`
 
- - Disk free  
+- Disk free  
 `df -h`
 
- - Show the contents of a file  
+- Show the contents of a file  
 `cat /etc/hosts`
 
- - Show mounted filesystems as a tree   
+- Show mounted filesystems as a tree  
 `findmnt`
 
 ## Lesson 2.2
- - Commands history  
+
+- Commands history  
 `history`
 
- - Run command number in history  
- runs command number 11  
-`!11` 
+- Run command number in history  
+ *Run command number 11*  
+`!11`  
 
- - Runs last command that starts with "f"  
+- Runs last command that starts with "f"  
 `!f`
 
-  - Search in history  
+- Search in history  
 `Ctrl + R`
 
- - Piping examples  
+- Piping examples  
 `ps aux | less`
 `ps aux | wc`
 
- - Redirection example  
+- Redirection example  
 `ls > lsfiles`
 
- - Redirection operators  
+- Redirection operators  
 `>` rewrite file  
 `>>` append to a file
 
- - Redirect error message 2> to a file named "errors"  
+- Redirect error message `2>` to a file named "errors"  
 `ls lwiedwqdq 2> errors`
 
- - Shows only the valid results  
+- Shows only the valid results
 `ls dwqdwqq * 2> /dev/null`
 
- - Environment variables  
+- Environment variables  
 `env`
 
- - Set enviornment variable  
+- Set enviornment variable  
 `LANG=fr_FR.utf-8`
 
- - Show aliases  
+- Show aliases  
 `alias`
 
- - Set an alias  
+- Set an alias  
 `alias h=history`
 
 ## Lesson 2.3
 
-Standard input: `file < command` The File will be used as input to a command
-Standard output: `command > file` Overwrite
-Standard output: `command >> file` Append
-Standard error: `2>`
+Standard input: `file < command` The File will be used as input to a command.  
+Standard output: `command > file` Overwrite.  
+Standard output: `command >> file` Append.  
+Standard error: `2>`  
  
 ## Lesson 2.4
 
- - Ignore errror messages  
+- Ignore errror messages  
 `grep -R student /etc 2>/dev/null`
 
- - Piping  
+- Piping  
 `ls -l /etc | grep host`
 
 ## Lesson 2.5 - Understanding the Linux Filesystem Hierarchy (FHS)
@@ -94,17 +97,17 @@ Standard error: `2>`
 `/var` - dynamic data  
 `/var/log` - log files  
 
- - Description of filesystem hierarchy  
+- Description of filesystem hierarchy  
 `man hier`
 
 ## Lesson 2.6 - Using man
 
- - How to use man  
+- How to use man  
 `man man`
 
 ## Lesson 2.7
 
- - Search man db
+- Search man db
 `man -k user`
 
 ## Lesson 2.9 - vim
@@ -117,7 +120,7 @@ Standard error: `2>`
  `yy` - copy the current line  
  `p` - paste  
  `d$` - delete from the current cursor position to the end of the line  
- 
+
  `v` - visual mode - selecting text  
  `u` - undo  
  `Ctrl-R` - redo  
@@ -135,22 +138,22 @@ Standard error: `2>`
 
 `man 7 glob`
 
- - Example  
+- Example  
 ls host*
 
- - Single character - `?`  
+- Single character - `?`  
 `ls ?ost`
 
- - Start with one of the characters h or m  
+- Start with one of the characters h or m  
 `ls [hm]ost`
 
- - Not starting witch h or m  
+- Not starting witch h or m  
 `[!hm]ost`
 
- - Ending with two digits  
+- Ending with two digits  
 `ls script[0-9][0-9]`
 
- - Testing - create multiple files  
+- Testing - create multiple files  
 `touch script{0..100}`
 
 ## Lesson 2.11 - Cockpit
